@@ -1,0 +1,33 @@
+{
+  "name": "cachefactory",
+  "version": "1.0.0",
+  "description": "A stand alone cacheFactory split from angular $cacheFactory",
+  "main": "cacheFactory.js",
+  "types": "cacheFactory.d.ts",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha",
+    "compile": "tsc -d --module umd cacheFactory.ts"
+  },
+  "keywords": [
+    "cache",
+    "factory"
+  ],
+  "author": "Treri",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2",
+    "typescript": "^2.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Treri/cacheFactory.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Treri/cacheFactory/issues"
+  },
+  "homepage": "https://github.com/Treri/cacheFactory#readme"
+}
