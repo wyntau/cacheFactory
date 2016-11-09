@@ -1,6 +1,6 @@
 {
-  "name": "cachefactory",
-  "version": "1.0.0",
+  "name": "cachefactory-ng",
+  "version": "0.1.0",
   "description": "A stand alone cacheFactory split from angular $cacheFactory",
   "main": "cacheFactory.js",
   "types": "cacheFactory.d.ts",
@@ -9,7 +9,7 @@
   },
   "scripts": {
     "test": "mocha",
-    "compile": "tsc -d --module umd cacheFactory.ts"
+    "compile": "tsc --module umd cacheFactory.ts"
   },
   "keywords": [
     "cache",
@@ -29,5 +29,9 @@
   "bugs": {
     "url": "https://github.com/Treri/cacheFactory/issues"
   },
-  "homepage": "https://github.com/Treri/cacheFactory#readme"
+  "homepage": "https://github.com/Treri/cacheFactory#readme",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "typescript": "^2.0.3"
+  }
 }

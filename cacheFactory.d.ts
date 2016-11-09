@@ -1,19 +1,31 @@
-export interface cacheFactoryInterface {
-    (cacheId: string, options?: {
-        capacity?: number;
-    }): cacheObject;
-    info?(): any;
-    get?(cacheId: string): cacheObject;
-}
-export interface cacheObject {
-    put<T>(key: string, value: T): T;
-    get<T>(key: string): T;
-    remove(key: string): void;
+export = cacheFactory;
+
+declare function cacheFactory(cacheId: string, options?: cacheFactory.cacheFactoryOption): cacheFactory.cacheObject;
+
+declare namespace cacheFactory{
+  interface cacheFactoryOption {
+    capacity?: number;
+    [key: string]: any;
+  }
+
+  interface cacheObjectStat {
+    id: string;
+    size: number;
+    [key: string]: any;
+  }
+
+  interface cacheObject {
+    get<T>(cacheId: string): T;
+    put<T>(cacheId: string, value: T): T;
+    remove(cacheId: string): void;
     removeAll(): void;
     destroy(): void;
-    info(): {
-        id: string;
-        size: number;
-    };
+    info(): cacheObjectStat;
+  }
+
+  function info(): {
+    [cacheId: string]: cacheObjectStat
+  }
+
+  function get(cacheId: string): cacheObject;
 }
-export declare let cacheFactory: cacheFactoryInterface;

@@ -9,9 +9,9 @@ See angular.js [`$cacheFactory`](https://docs.angularjs.org/api/ng/type/$cacheFa
 
 ```js
 
-import {cacheFactory} from 'cachefactory';
+var cacheFactory = require('cachefactory-ng');
 
-const cache = cacheFactory('cacheId');
+var cache = cacheFactory('cacheId');
 
 cache.put('key', value);
 ```
