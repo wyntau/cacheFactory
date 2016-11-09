@@ -1,4 +1,4 @@
-### cacheFactory
+### cachefactory-ng
 
 A stand alone cacheFactory split out from angular $cacheFactory. You can use it in any of your JavaScript applications, it doesn't have to be angular.js related.
 
