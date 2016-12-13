@@ -14,13 +14,16 @@ See angular.js [`$cacheFactory`](https://docs.angularjs.org/api/ng/type/$cacheFa
 ### Usage
 
 ```js
-
 var cacheFactory = require('cachefactory-ng');
 
 var cache = cacheFactory('cacheId');
 
 cache.put('key', value);
 ```
+
+### Related
+
+- [`http-ng`](https://github.com/Treri/http-ng)
 
 ### License
 MIT
