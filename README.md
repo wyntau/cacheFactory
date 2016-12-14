@@ -14,9 +14,9 @@ See angular.js [`$cacheFactory`](https://docs.angularjs.org/api/ng/type/$cacheFa
 ### Usage
 
 ```js
-var cacheFactory = require('cachefactory-ng');
+import cacheFactory from 'cachefactory-ng'
 
-var cache = cacheFactory('cacheId');
+let cache = cacheFactory('cacheId');
 
 cache.put('key', value);
 ```

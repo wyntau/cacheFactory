@@ -1,9 +1,3 @@
-(function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
-  typeof define === 'function' && define.amd ? define(['exports'], factory) :
-  (factory((global.cacheFactory = global.cacheFactory || {})));
-}(this, (function (exports) { 'use strict';
-
 // Pass in the objects to merge as arguments. For a deep extend, set the first
 // argument to `true`.
 function extend() {
@@ -40,7 +34,7 @@ function extend() {
     merge(obj);
   }
   return extended;
-}
+};
 
 function createMap() {
   return Object.create(null);
@@ -167,8 +161,4 @@ cacheFactory.get = function (cacheId) {
   return caches[cacheId];
 };
 
-exports['default'] = cacheFactory;
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
-})));
+export default cacheFactory;

@@ -1,6 +1,6 @@
 {
   "name": "cachefactory-ng",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "A stand alone cacheFactory split from angular $cacheFactory",
   "main": "cacheFactory.js",
   "types": "cacheFactory.d.ts",
@@ -9,7 +9,7 @@
   },
   "scripts": {
     "test": "mocha",
-    "compile": "tsc --module umd cacheFactory.ts"
+    "build": "rollup -c build/rollup.config.js && uglifyjs -m -o cachefactory.min.js -- cachefactory.js"
   },
   "keywords": [
     "cache",
@@ -20,7 +20,8 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.1.2",
-    "typescript": "^2.0.3"
+    "rollup": "^0.37.0",
+    "uglify-js": "^2.7.5"
   },
   "repository": {
     "type": "git",

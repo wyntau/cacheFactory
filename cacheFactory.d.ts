@@ -1,4 +1,3 @@
-export = cacheFactory;
 
 declare function cacheFactory(cacheId: string, options?: cacheFactory.cacheFactoryOption): cacheFactory.cacheObject;
 
@@ -29,3 +28,5 @@ declare namespace cacheFactory{
 
   function get(cacheId: string): cacheObject;
 }
+
+export default cacheFactory;
